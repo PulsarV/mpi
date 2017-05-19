@@ -7,6 +7,14 @@ security:
         in_memory:
             memory: ~
 
+        webservice:
+            id: app.webservice_user_provider
+
+    encoders:
+        AppBundle\User:
+            algorithm: bcrypt
+            cost: 12
+
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
